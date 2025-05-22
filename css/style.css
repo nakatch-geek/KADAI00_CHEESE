@@ -1,0 +1,445 @@
+/* ここから下に記載していく */
+/* Reset & Basic Styles */
+body, h1, h2, h3, p, ul, dl, dt, dd, figure, figcaption {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle; /* 画像下の余白対策 */
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky; /* スクロール追従ヘッダーにする場合 */
+    top: 0;           /* スクロール追従ヘッダーにする場合 */
+    z-index: 100;     /* スクロール追従ヘッダーにする場合 */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #222222;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #e8b32a;
+}
+
+/* Main Visual */
+#main-visual {
+    background-image: url('../img/mainbg.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    vertical-align:middle;
+    padding: 120px 0;
+    margin-top: 0; /* ヘッダーがfixed/stickyの場合の調整 */
+}
+
+#main-visual h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#main-visual p {
+    font-size: 32px;
+}
+
+/* Content Section */
+.content-section {
+    padding: 60px 0;
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 18px;
+    color: #222222;
+}
+
+.content-section h2 .en-title {
+    display: block;
+    font-size: 32px;
+    color: #e8b32a;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.content-section p {
+    font-size: 16px;
+    color: #222222;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* About Section */
+#about .container p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Course Section */
+.course-intro {
+    text-align: center;
+    margin-bottom: 30px !important;
+}
+.course-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.course-item {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    flex-basis: calc(33.333% - 20px); /* (100% / 3) - (gap * 2 / 3) */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex; /* course-item自体もflexにして中身を制御しやすくする */
+    flex-direction: column;
+}
+
+.course-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.course-item h3 {
+    font-size: 18px;
+    color: #222222;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.course-item p {
+    font-size: 14px;
+    text-align: left;
+    color: #555;
+    flex-grow: 1; /* 内容が少なくても高さを揃えるため */
+}
+
+
+/* News Section */
+.bg-gray {
+    background-color: #fafafa;
+}
+
+.news-list li {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+.news-list li:last-child {
+    margin-bottom: 0;
+}
+
+.news-list li img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+    flex-shrink: 0; /* 画像が縮まないように */
+}
+
+
+.news-content {
+    flex: 1;
+}
+
+.news-date:hover {
+    color: darkgrey;
+}
+
+.news-text:hover {
+    color: darkgrey;
+}
+
+.news img:hover {
+    transform: scale(1.2);
+}
+
+
+.news-date  {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px !important;
+    text-align: left !important;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+}
+
+.news-text {
+    font-size: 14px;
+    color: #555;
+    text-align: left !important;
+    margin-bottom: 0 !important;
+}
+
+.btn-area {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e8b32a;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d1a025;
+}
+
+/* Access Section */
+.access-map {
+    margin-bottom: 30px;
+}
+.access-map iframe {
+    display: block; /* iframe下の余白対策 */
+    width: 100%;
+}
+
+.access-info dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #eee;
+}
+
+.access-info dt {
+    flex-basis: 25%; /* dtの幅を指定 */
+    padding: 15px;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.access-info dd {
+    flex-basis: 75%; /* ddの幅を指定 */
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    margin-left: 0; /* dlがflexコンテナなのでddのデフォルトマージンをリセット */
+}
+
+
+/* Contact Section */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px !important;
+}
+
+.contact-form dl {
+    display: flex; /* Flexboxコンテナに */
+    flex-wrap: wrap; /* dt, ddを折り返す */
+    border-top: 1px solid #ccc;
+}
+
+.contact-form dt {
+    flex-basis: 30%; /* ラベル部分の幅 */
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center; /* ラベル内のテキストを上下中央揃え */
+}
+
+.contact-form dd {
+    flex-basis: 70%; /* 入力フィールド部分の幅 */
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    display: flex; /* dd内の要素の配置のため */
+    align-items: center; /* dd内の要素を中央揃え（特にselectなど） */
+    flex-wrap: wrap; /* チェックボックスなどを折り返せるように */
+    margin-left: 0; /* dlがflexコンテナなのでddのデフォルトマージンをリセット */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%; /* ddがflex itemなので、その中で100% */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.contact-form select {
+    /* height: 40px; heightはpaddingとfont-sizeで調整されることが多い */
+}
+
+.contact-form dd.checkbox-group label { /* checkbox-groupクラスを追加して調整 */
+    margin-right: 15px;
+    font-size: 14px;
+    display: inline-flex; /* ラベルとチェックボックスを揃える */
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.contact-form input[type="checkbox"] {
+    margin-right: 5px;
+    /* vertical-align: middle; inline-flexで不要になることも */
+}
+
+
+.contact-form button.btn {
+    background-color: #27ae60;
+    width: 200px;
+}
+
+.contact-form button.btn:hover {
+    background-color: #229954;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+footer small {
+    font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+    header nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header nav ul li a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    #main-visual h1 {
+        font-size: 36px; /* 少し調整 */
+    }
+    #main-visual p {
+        font-size: 18px; /* 少し調整 */
+    }
+
+    .course-details {
+        flex-direction: column;
+    }
+    .course-item {
+        margin-bottom: 30px;
+        flex-basis: 100%; /* 幅を100%に */
+    }
+    .course-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .news-list li {
+        flex-direction: column;
+        align-items: center; /* 中央揃え */
+    }
+    .news-list li img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .news-content p,
+    .news-date,
+    .news-title,
+    .news-text {
+        text-align: center !important; /* 全て中央揃えに */
+    }
+
+    .access-info dt, .access-info dd {
+        flex-basis: 100%; /* 幅を100%に */
+        text-align: left;
+    }
+
+    .contact-form dt, .contact-form dd {
+        flex-basis: 100%; /* 幅を100%に */
+    }
+     .contact-form dt {
+        justify-content: flex-start; /* ラベルを左寄せ */
+     }
+    .contact-form dd {
+        padding-top: 10px; /* スマホ表示でddの上パディング調整 */
+        padding-bottom: 10px;
+    }
+    .contact-form dd.checkbox-group label {
+        width: 100%; /* チェックボックスのラベルを1列に */
+        white-space: pre;
+        margin-right: 0;
+        
+
+    }
+}
